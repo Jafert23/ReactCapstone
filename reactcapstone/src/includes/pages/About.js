@@ -1,0 +1,38 @@
+import React from 'react';
+import TeamMemberCard from './teamMemberCard.js';
+
+const About = () => {
+  const team = [
+    {
+      name: 'Adrian',
+      bio: 'Adrian is our head chef and co-founder. He brings a modern twist to classic Mediterranean dishes.',
+      image: 'path/to/adrian.jpg',
+    },
+    {
+      name: 'Mario',
+      bio: 'Mario, co-owner and operations lead, ensures every guest has an amazing experience.',
+      image: 'path/to/mario.jpg',
+    },
+  ];
+
+  return (
+    <section className="about-section">
+      {/* Page Title */}
+      <h2>Meet Our Team</h2>
+
+      {/* Cards Container */}
+      <div className="team-grid">
+        {team.map((member, index) => (
+          <TeamMemberCard
+            key={index}
+            name={member.name}
+            bio={member.bio}
+            image={member.image}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default About;
