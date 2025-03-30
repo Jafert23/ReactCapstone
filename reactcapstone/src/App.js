@@ -1,4 +1,4 @@
-import './App.css';
+import './includes/styles/App.css';
 import Header from './includes/pages/Header.js';
 import Main from './includes/pages/Main.js';
 import Footer from './includes/pages/Footer.js';  
@@ -6,7 +6,7 @@ import Footer from './includes/pages/Footer.js';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
         <Header />
       </header>
       <main>

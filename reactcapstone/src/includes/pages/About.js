@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/About.css';
 import TeamMemberCard from './teamMemberCard.js';
 
 const About = () => {
