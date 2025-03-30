@@ -1,0 +1,86 @@
+.reservations-section {
+  padding: 4rem 0;
+  background-color: #EDEFEE;
+  min-height: 100vh;
+}
+
+.reservations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.reservations-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reservations-header h1 {
+  color: #495E57;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.reservations-header p {
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.confirmation-message {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.confirmation-message h2 {
+  color: #495E57;
+  margin-bottom: 1rem;
+}
+
+.reservation-details {
+  background-color: #F8F8F8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.reservation-details p {
+  margin-bottom: 0.5rem;
+}
+
+.new-reservation-btn {
+  background-color: #495E57;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.new-reservation-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .reservations-header h1 {
+    font-size: 2rem;
+  }
+  
+  .confirmation-message {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+} 
