@@ -1,12 +1,10 @@
 import React from 'react';
 import '../styles/HeroSection.css';
+import { scrollToElement } from '../utils/scrollUtils';
 
 const HeroSection = ({ name, city, description, heroImage }) => {
   const scrollToReservations = () => {
-    const reservationsSection = document.querySelector('.reservations-section');
-    if (reservationsSection) {
-      reservationsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToElement('reservations');
   };
 
   return (
