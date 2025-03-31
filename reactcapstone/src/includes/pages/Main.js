@@ -14,15 +14,29 @@ const heroProps = {
 function Main() {
   return (
     <main>
-      <HeroSection {...heroProps} />
-      <h2>Make a Reservation</h2>
-      <Reservations />
-      <h2>Specials</h2>
-      <Specials />
-      <h2>Testimonials</h2>
-      <Testimonials />
-      <h2>About</h2>
-      <About />
+      <section id="hero">
+        <HeroSection {...heroProps} />
+      </section>
+      
+      <section id="reservations">
+        <h2>Make a Reservation</h2>
+        <Reservations />
+      </section>
+      
+      <section id="specials">
+        <h2>Specials</h2>
+        <Specials />
+      </section>
+      
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <Testimonials />
+      </section>
+      
+      <section id="about">
+        <h2>About</h2>
+        <About />
+      </section>
     </main>
   );
 }
