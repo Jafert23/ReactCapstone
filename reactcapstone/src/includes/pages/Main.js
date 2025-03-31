@@ -1,8 +1,8 @@
-import heroSection from './heroSection';
 import Specials from './Specials';
 import Testimonials from './Testemonials';
 import About from './About';
 import Reservations from './Reservations';
+import HeroSection from './HeroSection';
 
 const heroProps = {
   name: 'Little Lemon',
@@ -14,7 +14,7 @@ const heroProps = {
 function Main() {
   return (
     <main>
-      <heroSection {...heroProps} />
+      <HeroSection {...heroProps} />
       <h2>Make a Reservation</h2>
       <Reservations />
       <h2>Specials</h2>

@@ -1,0 +1,57 @@
+.booking-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border: 2px solid #EDEFEE;
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-width: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.booking-slot:hover:not(.booked) {
+  border-color: #F4CE14;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-slot.booked {
+  background-color: #F8F8F8;
+  border-color: #E0E0E0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.booking-slot.selected {
+  background-color: #495E57;
+  border-color: #495E57;
+  color: white;
+}
+
+.booking-slot.selected .slot-status {
+  color: #F4CE14;
+}
+
+.slot-time {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.slot-status {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.booking-slot.booked .slot-status {
+  color: #D62828;
+}
+
+/* Focus styles for accessibility */
+.booking-slot:focus-visible {
+  outline: 2px solid #495E57;
+  outline-offset: 2px;
+} 

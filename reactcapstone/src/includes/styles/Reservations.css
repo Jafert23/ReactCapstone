@@ -2,9 +2,11 @@
   padding: 4rem 0;
   background-color: #EDEFEE;
   min-height: 100vh;
+  width: 100%;
 }
 
 .reservations-container {
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -12,20 +14,110 @@
 
 .reservations-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .reservations-header h1 {
   color: #495E57;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .reservations-header p {
   color: #333;
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.booking-process {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.date-picker-container label {
+  font-weight: bold;
+  color: #495E57;
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+}
+
+.date-picker {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #EDEFEE;
+  border-radius: 8px;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  text-align: center;
+  background-color: white;
+  transition: border-color 0.3s;
+  max-width: 250px;
+  width: 100%;
+}
+
+.date-picker:focus {
+  outline: none;
+  border-color: #495E57;
+  box-shadow: 0 0 0 2px rgba(73, 94, 87, 0.2);
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+  width: 90%;
+}
+
+.loading-indicator p {
+  color: #495E57;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  margin: 0;
+}
+
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: #FFEDEB;
+  border: 1px solid #FF6B6B;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+  width: 90%;
+}
+
+.error-message p {
+  color: #D62828;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.error-message button {
+  background-color: #495E57;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+.error-message button:hover {
+  background-color: #333;
 }
 
 .confirmation-message {
@@ -36,11 +128,13 @@
   max-width: 600px;
   margin: 3rem auto;
   text-align: center;
+  width: 90%;
 }
 
 .confirmation-message h2 {
   color: #495E57;
   margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 .reservation-details {
@@ -53,13 +147,15 @@
 
 .reservation-details p {
   margin-bottom: 0.5rem;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  line-height: 1.6;
 }
 
 .new-reservation-btn {
   background-color: #495E57;
   color: white;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
   padding: 1rem 1.5rem;
   border: none;
   border-radius: 8px;
@@ -74,13 +170,55 @@
 }
 
 /* Responsive styles */
+@media (max-width: 992px) {
+  .reservations-container {
+    width: 95%;
+  }
+}
+
 @media (max-width: 768px) {
+  .reservations-section {
+    padding: 3rem 0;
+  }
+  
   .reservations-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .confirmation-message {
     padding: 1.5rem;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
+    width: 95%;
+  }
+  
+  .date-picker {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservations-section {
+    padding: 2rem 0;
+  }
+  
+  .reservations-container {
+    width: 100%;
+    padding: 0 0.8rem;
+  }
+  
+  .date-picker-container label {
+    font-size: 1rem;
+  }
+  
+  .date-picker {
+    max-width: 200px;
+    padding: 0.6rem 1rem;
+  }
+  
+  .confirmation-message,
+  .loading-indicator,
+  .error-message {
+    width: 100%;
+    padding: 1.2rem;
   }
 } 

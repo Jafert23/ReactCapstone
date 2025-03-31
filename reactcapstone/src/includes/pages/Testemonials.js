@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Testimonials.css';
-import TestimonialCard from './testimonialCard.js';
+import TestimonialCard from './TestimonialCard';
 
 const Testimonials = ({ reviews }) => {
   const defaultReviews = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
-import TeamMemberCard from './teamMemberCard.js';
+import TeamMemberCard from './TeamMemberCard';
 
 const About = () => {
   const team = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Specials.css';
-import SpecialCard from './specialCard';    
+import SpecialCard from './SpecialCard';    
 
 const Specials = ({ specials }) => {
   const defaultSpecials = [

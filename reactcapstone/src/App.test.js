@@ -1,8 +1,13 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Little Lemon title', async () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  
+  // Use findByRole instead of findByText since there are multiple elements with "Little Lemon" text
+  const titleElement = await screen.findByRole('heading', { 
+    name: /Little Lemon/i,
+    level: 1 
+  });
+  expect(titleElement).toBeInTheDocument();
 });

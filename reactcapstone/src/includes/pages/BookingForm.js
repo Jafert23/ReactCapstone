@@ -1,18 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/BookingForm.css';
 
-const BookingForm = ({ onSubmit, availableTimes }) => {
+const BookingForm = ({ onSubmit, selectedDate, selectedTime, onTimeChange }) => {
   const [formData, setFormData] = useState({
-    date: '',
-    time: '',
+    date: selectedDate || '',
+    time: selectedTime || '',
     guests: 1,
     occasion: 'Birthday'
   });
 
   const [formErrors, setFormErrors] = useState({});
+  
+  // Update form when selected date or time changes externally
+  useEffect(() => {
+    setFormData(prevData => ({
+      ...prevData,
+      date: selectedDate || prevData.date,
+      time: selectedTime || prevData.time
+    }));
+  }, [selectedDate, selectedTime]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
+    // If time is changed, notify parent component
+    if (name === 'time' && onTimeChange) {
+      onTimeChange(value);
+    }
+    
     setFormData({
       ...formData,
       [name]: value
@@ -73,27 +88,18 @@ const BookingForm = ({ onSubmit, availableTimes }) => {
 
         <div className="form-group">
           <label htmlFor="time">Time</label>
-          <select 
-            id="time" 
+          <input 
+            type="hidden" 
             name="time" 
             value={formData.time} 
-            onChange={handleChange}
-            required
-            aria-label="Reservation time"
-          >
-            <option value="">Select a time</option>
-            {availableTimes?.map(time => (
-              <option key={time} value={time}>{time}</option>
-            )) || (
-              <>
-                <option value="17:00">5:00 PM</option>
-                <option value="18:00">6:00 PM</option>
-                <option value="19:00">7:00 PM</option>
-                <option value="20:00">8:00 PM</option>
-                <option value="21:00">9:00 PM</option>
-              </>
+          />
+          <div className="selected-time-display">
+            {formData.time ? (
+              <span>Selected time: <strong>{formData.time}</strong></span>
+            ) : (
+              <span className="error-message">Please select a time from the available slots</span>
             )}
-          </select>
+          </div>
           {formErrors.time && <span className="error-message">{formErrors.time}</span>}
         </div>
 
@@ -129,7 +135,13 @@ const BookingForm = ({ onSubmit, availableTimes }) => {
           </select>
         </div>
 
-        <button type="submit" className="submit-button">Reserve Table</button>
+        <button 
+          type="submit" 
+          className="submit-button"
+          disabled={!formData.time}
+        >
+          Reserve Table
+        </button>
       </form>
     </div>
   );

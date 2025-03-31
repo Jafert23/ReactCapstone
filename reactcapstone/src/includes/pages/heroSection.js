@@ -1,7 +1,14 @@
 import React from 'react';
 import '../styles/HeroSection.css';
 
-const heroSection = ({ name, city, description, heroImage }) => {
+const HeroSection = ({ name, city, description, heroImage }) => {
+  const scrollToReservations = () => {
+    const reservationsSection = document.querySelector('.reservations-section');
+    if (reservationsSection) {
+      reservationsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="hero-section">
       <div className="hero-container">
@@ -10,7 +17,7 @@ const heroSection = ({ name, city, description, heroImage }) => {
           <h1>{name}</h1>
           <h2>{city}</h2>
           <p>{description}</p>
-          <button className="reserve-btn">Reserve a Table</button>
+          <button className="reserve-btn" onClick={scrollToReservations}>Reserve a Table</button>
         </div>
 
         {/* Right: Hero Image */}
@@ -22,4 +29,4 @@ const heroSection = ({ name, city, description, heroImage }) => {
   );
 };
 
-export default heroSection;
+export default HeroSection;

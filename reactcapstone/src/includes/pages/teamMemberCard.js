@@ -1,6 +1,7 @@
 import React from 'react';
+import '../styles/TeamMemberCard.css';
 
-const teamMemberCard = ({ name, bio, image }) => {
+const TeamMemberCard = ({ name, bio, image }) => {
   return (
     <div className="team-member-card">
       {/* Photo */}
@@ -13,4 +14,4 @@ const teamMemberCard = ({ name, bio, image }) => {
   );
 };
 
-export default teamMemberCard;
+export default TeamMemberCard; 
