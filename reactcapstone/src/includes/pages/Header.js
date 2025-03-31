@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Header.css';
 import { createScrollHandler } from '../utils/scrollUtils';
+import logo from '../images/Logo.svg';
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
       <nav className="navbar">
         {/* Logo (left) */}
         <div className="logo">
-          <img src="path/to/logo.png" alt="Little Lemon Logo" />
+          <img src={logo} alt="Little Lemon Logo" />
         </div>
 
         {/* Navigation Links (right) */}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const testimonialCard = ({ image, username, review, stars }) => {
+const TestimonialCard = ({ image, username, review, stars }) => {
   return (
     <div className="testimonial-card">
       {/* Star Rating */}
@@ -20,4 +20,4 @@ const testimonialCard = ({ image, username, review, stars }) => {
   );
 };
 
-export default testimonialCard;
+export default TestimonialCard;

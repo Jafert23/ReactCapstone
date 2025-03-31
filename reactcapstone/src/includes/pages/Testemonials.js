@@ -1,6 +1,10 @@
 import React from 'react';
 import '../styles/Testimonials.css';
 import TestimonialCard from './TestimonialCard';
+import sara from '../images/Sarah.png';
+import mike from '../images/Mike.png';
+import jessica from '../images/Jessica.png';
+import david from '../images/David.png';
 
 const Testimonials = ({ reviews }) => {
   const defaultReviews = [
@@ -8,25 +12,25 @@ const Testimonials = ({ reviews }) => {
       username: 'Sara L.',
       stars: 5,
       review: 'The Mediterranean flavors were authentic and delicious! Will definitely return.',
-      image: 'path/to/sara.jpg',
+      image: sara,
     },
     {
       username: 'Mike T.',
       stars: 4,
       review: 'Great atmosphere and excellent service. The lemon dessert was amazing!',
-      image: 'path/to/mike.jpg',
+      image: mike,
     },
     {
       username: 'Jessica R.',
       stars: 5,
       review: 'Best Greek salad in town, and the staff is incredibly friendly.',
-      image: 'path/to/jessica.jpg',
+      image: jessica,
     },
     {
       username: 'David K.',
       stars: 4,
       review: 'Wonderful dining experience with authentic Mediterranean cuisine.',
-      image: 'path/to/david.jpg',
+      image: david,
     }
   ];
 

@@ -1,18 +1,20 @@
 import React from 'react';
 import '../styles/About.css';
 import TeamMemberCard from './TeamMemberCard';
+import mario from '../images/Mario.png';
+import adrian from '../images/Adrian.png';
 
 const About = () => {
   const team = [
     {
       name: 'Adrian',
       bio: 'Adrian is our head chef and co-founder. He brings a modern twist to classic Mediterranean dishes.',
-      image: 'path/to/adrian.jpg',
+      image: adrian,
     },
     {
       name: 'Mario',
       bio: 'Mario, co-owner and operations lead, ensures every guest has an amazing experience.',
-      image: 'path/to/mario.jpg',
+      image: mario,
     },
   ];
 

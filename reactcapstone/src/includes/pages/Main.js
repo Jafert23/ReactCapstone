@@ -3,12 +3,13 @@ import Testimonials from './Testemonials';
 import About from './About';
 import Reservations from './Reservations';
 import HeroSection from './HeroSection';
+import heroImage from '../images/restaurant-food.jpg';
 
 const heroProps = {
   name: 'Little Lemon',
   city: 'Chicago',
   description: 'Enjoy our modern take on classic Mediterranean dishes in a cozy setting.',
-  heroImage: 'path/to/hero-image.jpg'
+  heroImage: heroImage
 }
 
 function Main() {

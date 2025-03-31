@@ -1,6 +1,9 @@
 import React from 'react';
 import '../styles/Specials.css';
 import SpecialCard from './SpecialCard';    
+import greekSalad from '../images/greek-salad.jpg';
+import fishPlate from '../images/fishPlate.jpg';
+import lemonDessert from '../images/lemon-dessert.jpg';
 
 const Specials = ({ specials }) => {
   const defaultSpecials = [
@@ -8,19 +11,19 @@ const Specials = ({ specials }) => {
       name: 'Greek Salad',
       price: '12.99',
       description: 'Fresh and crisp Greek salad with feta cheese, olives, and our homemade dressing.',
-      image: 'path/to/greek-salad.jpg',
+      image: greekSalad,
     },
     {
-      name: 'Bruschetta',
-      price: '9.99',
-      description: 'Toasted bread topped with tomatoes, Parmesan cheese, garlic, and fresh basil.',
-      image: 'path/to/bruschetta.jpg',
+      name: 'Fish Plate',
+      price: '14.99',
+      description: 'Fresh Mediterranean fish with seasonal vegetables and our special sauce.',
+      image: fishPlate,
     },
     {
       name: 'Lemon Dessert',
       price: '7.99',
       description: 'Our famous lemon dessert, made with imported Italian lemons and a secret family recipe.',
-      image: 'path/to/lemon-dessert.jpg',
+      image: lemonDessert,
     }
   ];
 
