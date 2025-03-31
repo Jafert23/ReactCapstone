@@ -1,12 +1,14 @@
 import React from 'react';
 import '../styles/Footer.css';
-
+import logo from '../images/Logo.svg';
 function Footer() {
   return (
     <div>
       <div className="footer-content">
         <div className="footer-section">
-          <img src="path/to/logo.png" alt="Little Lemon Logo" className="footer-logo" />
+          <div className="footer-logo">
+            <img src={logo} alt="Little Lemon Logo" />
+          </div>
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
         </div>
         
@@ -28,9 +30,9 @@ function Footer() {
           <p>Phone: (123) 456-7890</p>
           <p>Email: info@littlelemon.com</p>
           <div className="social-icons">
-            <a href="#"><i className="fa fa-facebook"></i></a>
-            <a href="#"><i className="fa fa-instagram"></i></a>
-            <a href="#"><i className="fa fa-twitter"></i></a>
+            <a href="/#"><i className="fa fa-facebook"></i></a>
+            <a href="/#"><i className="fa fa-instagram"></i></a>
+            <a href="/#"><i className="fa fa-twitter"></i></a>
           </div>
         </div>
       </div>
